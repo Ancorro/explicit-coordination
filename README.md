@@ -8,7 +8,7 @@ Independent reproduction of Yujing Hu, Yingfeng Chen, Changjie Fan and Jianye Ha
 
 We implement the paper's tabular EXCEL algorithm and hysteretic Q-learning (HYQ) on its coordination matrix games. We omit RFMQ, LMRL2, the grid worlds and neural-network experiments. Unlike the paper's 20,000 training periods per setting, this experiment uses 512, so uncertainty is larger. Each period is treated as a 10,000-step episode, with EXCEL's complementary factor reset once at its start. At each of five checkpoints we measure deterministic greedy play; the paper measures after every play. Ties are randomly broken. These choices and any implementation differences may contribute to discrepancies.
 
-Run `bash setup.sh`, `python run_all.py`, and `python -m pytest -q`. Results are saved to `results.json`.
+Run `bash setup.sh`, `python run_all.py`, and `python -m pytest -q`. Results are saved to `results.json`. The first 512-trial run (c reset once per period) is in `results_512_period_reset.json`.
 
 ## Results
 
@@ -23,4 +23,4 @@ Final coordination fraction, 512 independent trials per setting, 10,000 steps pe
 | 5 | deterministic | 0.023 / 0.975 | 0.393 / 0.547 |
 | 5 | stochastic | 0.002 / 0.983 | 0.404 / 0.205 |
 
-The EXCEL result does not reproduce the paper: its coordination is much lower in every setting. HYQ is broadly similar in the three-agent case but diverges at five agents. The cause of the EXCEL discrepancy is unresolved; episode boundaries, value complement behavior, and tie handling warrant investigation. These are hypotheses, not established explanations. The results do not establish the paper's claimed advantage. The complete checkpoint measurements and hyperparameters are in `results.json`.
+The EXCEL result does not reproduce the paper: its coordination is much lower in every setting. HYQ is broadly similar in the three-agent case but diverges at five agents. The cause of the EXCEL discrepancy is unresolved; episode boundaries, value complement behavior, and tie handling warrant investigation. These are hypotheses, not established explanations. The results do not establish the paper's claimed advantage. The complete checkpoint measurements and hyperparameters are in `results_512_period_reset.json`. Later diagnosis: that run reset the complementary factor once per 10,000-play period; resetting it every play (one game play as one episode, the code default now) gives near-paper EXCEL coordination in short probes. Paper-scale results pending.
