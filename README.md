@@ -16,34 +16,31 @@ Algorithm 1 resets EXCEL's complementary factor c at the start of each episode. 
 bash setup.sh
 python -m pytest -q
 python experiment.py --method excel --agents 3 --trials 128 --stochastic
-python run_all.py   # all 18 settings at 20,000 trials each; writes results.json
+python run_all.py   # all 18 settings at 20,000 trials each; writes results.json (parallel; heavy for a laptop)
 ```
 
 ## Results
 
 Final coordination fraction after 10,000 plays, 20 actions. Learning rate: EXCEL 0.2; HYQ positive 0.05 and negative 0.02. Exploration: epsilon-greedy, max(0.1, 0.99977^step) from 1. EXCEL complement: starts at 0, increment 0.001, cap 1. Stochastic reward standard deviations come from the paper's 90% (optimal) and 95% (other) normal intervals. Discount 0. CPU only.
 
-**First run** (512 trials per setting, seed 42, c reset once per period; `results_512_period_reset.json`):
+**Paper-scale run** (20,000 trials per setting, as in the paper, in 8 chunks with seeds 42-49; Slurm CPU cluster; `results.json`):
 
-| Agents | Reward | EXCEL ours / paper | HYQ ours / paper |
-|---|---|---|---|
-| 3 | deterministic | 0.232 / 0.999 | 0.965 / 0.960 |
-| 3 | stochastic | 0.086 / 0.999 | 0.803 / 0.793 |
-| 4 | deterministic | 0.074 / 0.995 | 0.756 / 0.766 |
-| 4 | stochastic | 0.008 / 0.993 | 0.553 / 0.440 |
-| 5 | deterministic | 0.023 / 0.975 | 0.393 / 0.547 |
-| 5 | stochastic | 0.002 / 0.983 | 0.404 / 0.205 |
+| Agents | Reward | EXCEL, c reset per play | EXCEL, c reset per period | EXCEL paper | HYQ ours | HYQ paper |
+|---|---|---|---|---|---|---|
+| 3 | deterministic | 1.000 | 0.228 | 0.999 | 0.957 | 0.960 |
+| 3 | stochastic | 0.998 | 0.086 | 0.999 | 0.794 | 0.793 |
+| 4 | deterministic | 1.000 | 0.071 | 0.995 | 0.742 | 0.766 |
+| 4 | stochastic | 0.832 | 0.019 | 0.993 | 0.569 | 0.440 |
+| 5 | deterministic | 1.000 | 0.024 | 0.975 | 0.389 | 0.547 |
+| 5 | stochastic | 0.474 | 0.005 | 0.983 | 0.356 | 0.205 |
 
-**Probe of the reset rule** (128 trials per setting, seed 1):
+With c reset before every play, EXCEL reproduces the paper in all three deterministic games and in the three-agent stochastic game. It misses in the four-agent (0.832 vs 0.993) and five-agent (0.474 vs 0.983) stochastic games. With c reset once per period, EXCEL fails everywhere. HYQ matches the paper for three agents and for four agents with deterministic rewards; it is lower at five agents with deterministic rewards and higher in the four- and five-agent stochastic games.
 
-| Agents | Reward | c reset per period | c reset per play | Paper |
-|---|---|---|---|---|
-| 3 | deterministic | 0.22 | 1.00 | 0.999 |
-| 3 | stochastic | 0.09 | 1.00 | 0.999 |
-| 5 | deterministic | 0.02 | 1.00 | 0.975 |
-| 5 | stochastic | 0.00 | 0.49 | 0.983 |
+Why the period reset fails: when c carries over between plays, it grows, and the complement step (Algorithm 1, lines 21-23) keeps pulling the optimistic values toward the average values. The optimal joint action is sampled rarely, so its optimistic value decays between samples, and EXCEL behaves like an average learner. In a 128-trial sweep of the cap on c with c carried over, coordination fell as the cap rose (five agents, deterministic: 0.61 at cap 0.001, 0.008 at cap 1). The set of actions with the highest optimistic value never contained a tie, so tie breaking plays no part.
 
-When c carries over between plays, it grows, and the complement step (Algorithm 1, lines 21-23) keeps pulling the optimistic values toward the average values. The optimal joint action is sampled rarely, so its optimistic value decays between samples, and EXCEL behaves like an average learner. In a sweep of the cap on c with c carried over, coordination fell as the cap rose (five agents, deterministic: 0.61 at cap 0.001, 0.008 at cap 1). Resetting c every play matches the paper in three of the four probed settings. The five-agent stochastic setting still misses: under this reading c never exceeds 0.001, so the complement does little against noise. The paper's statement that c "increases from 0 to 1" does not fit a per-play reset, so neither reading reproduces every number. The 20,000-trial run of all settings has not been completed yet; `results.json` will hold it.
+Why the stochastic games still miss: under a per-play reset c never exceeds 0.001, so the complement step does little against reward noise, and optimistic values drift toward the upper tail of noisy rewards. The paper's statement that c "increases from 0 to 1" does not fit a per-play reset, so the authors likely used a rule we have not identified. The paper does not say.
+
+The first 512-trial run (c reset once per period, seed 42) is kept in `results_512_period_reset.json`; its numbers agree with the period-reset column above.
 
 ## Sources and attribution
 

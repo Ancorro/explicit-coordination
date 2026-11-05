@@ -1,0 +1,848 @@
+[
+  {
+    "method": "excel",
+    "agents": 3,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": false,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "play",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0028,
+        "reward": 36.69985
+      },
+      {
+        "step": 100,
+        "coordination": 0.0095,
+        "reward": 40.5675
+      },
+      {
+        "step": 1000,
+        "coordination": 0.2577,
+        "reward": 55.3558
+      },
+      {
+        "step": 5000,
+        "coordination": 1.0,
+        "reward": 57.0
+      },
+      {
+        "step": 10000,
+        "coordination": 1.0,
+        "reward": 57.0
+      }
+    ]
+  },
+  {
+    "method": "excel",
+    "agents": 3,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": true,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "play",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0028,
+        "reward": 36.69985
+      },
+      {
+        "step": 100,
+        "coordination": 0.01045,
+        "reward": 40.307249999999996
+      },
+      {
+        "step": 1000,
+        "coordination": 0.2259,
+        "reward": 54.52425
+      },
+      {
+        "step": 5000,
+        "coordination": 0.9544,
+        "reward": 56.9407
+      },
+      {
+        "step": 10000,
+        "coordination": 0.99825,
+        "reward": 56.99785
+      }
+    ]
+  },
+  {
+    "method": "excel",
+    "agents": 4,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": false,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "play",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0001,
+        "reward": 47.293099999999995
+      },
+      {
+        "step": 100,
+        "coordination": 0.00035,
+        "reward": 50.9227
+      },
+      {
+        "step": 1000,
+        "coordination": 0.0791,
+        "reward": 72.70495
+      },
+      {
+        "step": 5000,
+        "coordination": 0.9524,
+        "reward": 75.9521
+      },
+      {
+        "step": 10000,
+        "coordination": 1.0,
+        "reward": 76.0
+      }
+    ]
+  },
+  {
+    "method": "excel",
+    "agents": 4,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": true,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "play",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0001,
+        "reward": 47.293099999999995
+      },
+      {
+        "step": 100,
+        "coordination": 0.0006,
+        "reward": 50.7571
+      },
+      {
+        "step": 1000,
+        "coordination": 0.0558,
+        "reward": 71.34190000000001
+      },
+      {
+        "step": 5000,
+        "coordination": 0.5641,
+        "reward": 75.16329999999999
+      },
+      {
+        "step": 10000,
+        "coordination": 0.8321500000000001,
+        "reward": 75.6902
+      }
+    ]
+  },
+  {
+    "method": "excel",
+    "agents": 5,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": false,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "play",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0,
+        "reward": 57.918499999999995
+      },
+      {
+        "step": 100,
+        "coordination": 5e-05,
+        "reward": 61.40965
+      },
+      {
+        "step": 1000,
+        "coordination": 0.0215,
+        "reward": 89.85265
+      },
+      {
+        "step": 5000,
+        "coordination": 0.42855,
+        "reward": 94.23625
+      },
+      {
+        "step": 10000,
+        "coordination": 0.9999,
+        "reward": 94.9999
+      }
+    ]
+  },
+  {
+    "method": "excel",
+    "agents": 5,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": true,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "play",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0,
+        "reward": 57.918499999999995
+      },
+      {
+        "step": 100,
+        "coordination": 0.0001,
+        "reward": 61.3403
+      },
+      {
+        "step": 1000,
+        "coordination": 0.013049999999999999,
+        "reward": 87.5216
+      },
+      {
+        "step": 5000,
+        "coordination": 0.2182,
+        "reward": 92.8616
+      },
+      {
+        "step": 10000,
+        "coordination": 0.4737,
+        "reward": 93.70609999999999
+      }
+    ]
+  },
+  {
+    "method": "excel",
+    "agents": 3,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": false,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "period",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0028,
+        "reward": 36.69985
+      },
+      {
+        "step": 100,
+        "coordination": 0.00945,
+        "reward": 40.572
+      },
+      {
+        "step": 1000,
+        "coordination": 0.06005,
+        "reward": 49.8967
+      },
+      {
+        "step": 5000,
+        "coordination": 0.12745,
+        "reward": 53.54085
+      },
+      {
+        "step": 10000,
+        "coordination": 0.22765,
+        "reward": 54.76865
+      }
+    ]
+  },
+  {
+    "method": "excel",
+    "agents": 3,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": true,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "period",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0028,
+        "reward": 36.69985
+      },
+      {
+        "step": 100,
+        "coordination": 0.0106,
+        "reward": 40.317350000000005
+      },
+      {
+        "step": 1000,
+        "coordination": 0.046,
+        "reward": 47.84495
+      },
+      {
+        "step": 5000,
+        "coordination": 0.0801,
+        "reward": 52.70185
+      },
+      {
+        "step": 10000,
+        "coordination": 0.0858,
+        "reward": 53.73965
+      }
+    ]
+  },
+  {
+    "method": "excel",
+    "agents": 4,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": false,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "period",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0001,
+        "reward": 47.293099999999995
+      },
+      {
+        "step": 100,
+        "coordination": 0.00035,
+        "reward": 50.925
+      },
+      {
+        "step": 1000,
+        "coordination": 0.0106,
+        "reward": 64.47755000000001
+      },
+      {
+        "step": 5000,
+        "coordination": 0.03105,
+        "reward": 70.02255
+      },
+      {
+        "step": 10000,
+        "coordination": 0.0712,
+        "reward": 71.98385
+      }
+    ]
+  },
+  {
+    "method": "excel",
+    "agents": 4,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": true,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "period",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0001,
+        "reward": 47.293099999999995
+      },
+      {
+        "step": 100,
+        "coordination": 0.00055,
+        "reward": 50.7566
+      },
+      {
+        "step": 1000,
+        "coordination": 0.00565,
+        "reward": 60.54475
+      },
+      {
+        "step": 5000,
+        "coordination": 0.01805,
+        "reward": 68.5004
+      },
+      {
+        "step": 10000,
+        "coordination": 0.01945,
+        "reward": 70.28355
+      }
+    ]
+  },
+  {
+    "method": "excel",
+    "agents": 5,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": false,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "period",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0,
+        "reward": 57.918499999999995
+      },
+      {
+        "step": 100,
+        "coordination": 5e-05,
+        "reward": 61.4115
+      },
+      {
+        "step": 1000,
+        "coordination": 0.0015,
+        "reward": 78.46615
+      },
+      {
+        "step": 5000,
+        "coordination": 0.0057,
+        "reward": 86.22015
+      },
+      {
+        "step": 10000,
+        "coordination": 0.024,
+        "reward": 88.92660000000001
+      }
+    ]
+  },
+  {
+    "method": "excel",
+    "agents": 5,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": true,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": "period",
+    "cmax": 1.0,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0,
+        "reward": 57.918499999999995
+      },
+      {
+        "step": 100,
+        "coordination": 0.0001,
+        "reward": 61.33425
+      },
+      {
+        "step": 1000,
+        "coordination": 0.00035,
+        "reward": 72.7405
+      },
+      {
+        "step": 5000,
+        "coordination": 0.0031,
+        "reward": 83.73175
+      },
+      {
+        "step": 10000,
+        "coordination": 0.0049499999999999995,
+        "reward": 85.9093
+      }
+    ]
+  },
+  {
+    "method": "hyq",
+    "agents": 3,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": false,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": null,
+    "cmax": null,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0028,
+        "reward": 36.69985
+      },
+      {
+        "step": 100,
+        "coordination": 0.0039499999999999995,
+        "reward": 38.435
+      },
+      {
+        "step": 1000,
+        "coordination": 0.028,
+        "reward": 45.53125
+      },
+      {
+        "step": 5000,
+        "coordination": 0.70785,
+        "reward": 56.66475
+      },
+      {
+        "step": 10000,
+        "coordination": 0.95695,
+        "reward": 56.9566
+      }
+    ]
+  },
+  {
+    "method": "hyq",
+    "agents": 3,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": true,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": null,
+    "cmax": null,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0028,
+        "reward": 36.69985
+      },
+      {
+        "step": 100,
+        "coordination": 0.00395,
+        "reward": 38.42475
+      },
+      {
+        "step": 1000,
+        "coordination": 0.03045,
+        "reward": 45.5424
+      },
+      {
+        "step": 5000,
+        "coordination": 0.60535,
+        "reward": 56.4668
+      },
+      {
+        "step": 10000,
+        "coordination": 0.79425,
+        "reward": 56.7632
+      }
+    ]
+  },
+  {
+    "method": "hyq",
+    "agents": 4,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": false,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": null,
+    "cmax": null,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0001,
+        "reward": 47.293099999999995
+      },
+      {
+        "step": 100,
+        "coordination": 0.00015,
+        "reward": 48.9006
+      },
+      {
+        "step": 1000,
+        "coordination": 0.00185,
+        "reward": 54.2577
+      },
+      {
+        "step": 5000,
+        "coordination": 0.3871,
+        "reward": 75.08615
+      },
+      {
+        "step": 10000,
+        "coordination": 0.74245,
+        "reward": 75.71935
+      }
+    ]
+  },
+  {
+    "method": "hyq",
+    "agents": 4,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": true,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": null,
+    "cmax": null,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0001,
+        "reward": 47.293099999999995
+      },
+      {
+        "step": 100,
+        "coordination": 0.00025,
+        "reward": 48.85065
+      },
+      {
+        "step": 1000,
+        "coordination": 0.002,
+        "reward": 54.642250000000004
+      },
+      {
+        "step": 5000,
+        "coordination": 0.33585,
+        "reward": 74.873
+      },
+      {
+        "step": 10000,
+        "coordination": 0.56935,
+        "reward": 75.40325
+      }
+    ]
+  },
+  {
+    "method": "hyq",
+    "agents": 5,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": false,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": null,
+    "cmax": null,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0,
+        "reward": 57.918499999999995
+      },
+      {
+        "step": 100,
+        "coordination": 0.0,
+        "reward": 59.346000000000004
+      },
+      {
+        "step": 1000,
+        "coordination": 0.0001,
+        "reward": 63.106700000000004
+      },
+      {
+        "step": 5000,
+        "coordination": 0.16075,
+        "reward": 93.2118
+      },
+      {
+        "step": 10000,
+        "coordination": 0.38885,
+        "reward": 94.1337
+      }
+    ]
+  },
+  {
+    "method": "hyq",
+    "agents": 5,
+    "actions": 20,
+    "trials": 20000,
+    "steps": 10000,
+    "stochastic": true,
+    "seed": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "c_reset": null,
+    "cmax": null,
+    "curve": [
+      {
+        "step": 1,
+        "coordination": 0.0,
+        "reward": 57.918499999999995
+      },
+      {
+        "step": 100,
+        "coordination": 0.0,
+        "reward": 59.4187
+      },
+      {
+        "step": 1000,
+        "coordination": 5e-05,
+        "reward": 63.62215
+      },
+      {
+        "step": 5000,
+        "coordination": 0.15775,
+        "reward": 93.05595
+      },
+      {
+        "step": 10000,
+        "coordination": 0.35565,
+        "reward": 93.8944
+      }
+    ]
+  }
+]
