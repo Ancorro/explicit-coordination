@@ -1,6 +1,6 @@
 # Explicitly Coordinated Policy Iteration: independent reproduction
 
-*AI-sourced: written by an AI agent.*
+*AI-sourced: assisted by AI agents.*
 
 Independent reproduction of Yujing Hu, Yingfeng Chen, Changjie Fan and Jianye Hao, [Explicitly Coordinated Policy Iteration](https://www.ijcai.org/proceedings/2019/51) (IJCAI 2019).
 
